@@ -7,9 +7,9 @@ import seaborn as sns
 # ================== SETUP CONFIGURATION ==================
 st.set_page_config(page_title="E-Commerce Dashboard", layout="wide")
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Dapatkan direktori skrip
-DATA_PATH = os.path.join(BASE_DIR, "dashboard", "data.csv")  # Pastikan file CSV ada dalam folder "dashboard"
-
+# Cek apakah file ada secara lokal, jika tidak, gunakan GitHub Raw URL
+LOCAL_PATH = os.path.join("dashboard", "data.csv")  # Path di lokal
+GITHUB_URL = "https://raw.githubusercontent.com/Suartana12/dashboard-ecommerce/main/dashboard/data.csv" 
 # ================== LOAD DATA ==================
 @st.cache_data
 def load_data():
