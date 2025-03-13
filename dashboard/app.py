@@ -7,8 +7,8 @@ import seaborn as sns
 # ================== SETUP CONFIGURATION ==================
 st.set_page_config(page_title="E-Commerce Dashboard", layout="wide")
 
-# Path dataset
-DATA_PATH = os.path.join("C:\\Users\\yogas\\submission\\dashboard", "main_dataset.csv")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Dapatkan direktori skrip
+DATA_PATH = os.path.join(BASE_DIR, "dashboard", "data.csv")  # Pastikan file CSV ada dalam folder "dashboard"
 
 # ================== LOAD DATA ==================
 @st.cache_data
