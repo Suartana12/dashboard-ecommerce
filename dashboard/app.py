@@ -8,8 +8,8 @@ import seaborn as sns
 st.set_page_config(page_title="E-Commerce Dashboard", layout="wide")
 
 # Menentukan path dataset
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Direktori utama script
-DATA_PATH = os.path.join(BASE_DIR, "dashboard", "main_dataset.csv")  # Path file CSV
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Ambil direktori file saat ini
+DATA_PATH = os.path.join(BASE_DIR, "main_dataset.csv")
 
 # ================== LOAD DATA ==================
 @st.cache_data
